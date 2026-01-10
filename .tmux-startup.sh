@@ -11,7 +11,7 @@ if [ $? -eq 0 ]; then
 fi
 
 tmux new-session -d -s "$SESSION_NAME" -n "dev" -c "$HOME/Development"
-
-tmux new-window -t "$SESSION_NAME":2 -n "docs" -c "$HOME/Docs"
+tmux new-window -t "$SESSION_NAME":2 -n "zsh" -c "$HOME"
+tmux new-window -t "$SESSION_NAME":3 -n "docs" -c "$HOME/Docs"
 
 tmux attach -t "$SESSION_NAME"
