@@ -10,8 +10,11 @@ if [ $? -eq 0 ]; then
   exit 0
 fi
 
-tmux new-session -d -s "$SESSION_NAME" -n "dev" -c "$HOME/Development"
+tmux new-session -d -s "$SESSION_NAME" -n "dev" -c "$HOME/repos/microfrontend"
+tmux set-option -t "$SESSION_NAME" -g base-index 1
+tmux set-option -t "$SESSION_NAME" -g pane-base-index 1
+
 tmux new-window -t "$SESSION_NAME":2 -n "zsh" -c "$HOME"
-tmux new-window -t "$SESSION_NAME":3 -n "docs" -c "$HOME/Docs"
+tmux new-window -t "$SESSION_NAME":3 -n "docs" -c "$HOME/docs"
 
 tmux attach -t "$SESSION_NAME"
