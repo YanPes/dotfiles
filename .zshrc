@@ -27,5 +27,6 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:/usr/local/bin
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=$HOME/.local/bin:$PATH
+export PATH="$HOME/opt/gitkraken:$PATH"
 
 source $ZSH/oh-my-zsh.sh
