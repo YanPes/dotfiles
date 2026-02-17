@@ -20,3 +20,6 @@ keymap.set("n", "gb", ":bprev<CR>", opts)
 
 -- Exit "insert" mode with "jj"
 keymap.set("i", "jj", "<ESC>", opts)
+
+-- Use Neotree as default
+keymap.set("n", "<leader>e", ":Neotree toggle<CR>", opts)
