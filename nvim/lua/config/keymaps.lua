@@ -23,3 +23,6 @@ keymap.set("i", "jj", "<ESC>", opts)
 
 -- Use Neotree as default
 keymap.set("n", "<leader>e", ":Neotree toggle<CR>", opts)
+
+keymap.set("n", "C-d", "C-dzz", opts)
+keymap.set("n", "C-u", "C-uzz", opts)
