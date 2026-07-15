@@ -8,6 +8,7 @@ keymap.set("n", "<leader>sv", ":vsplit<CR>", opts)
 -- Windows split & opening new terminal session
 keymap.set("n", "<leader>tv", ":vsplit | terminal<CR>", opts)
 keymap.set("n", "<leader>th", ":split | terminal<CR>", opts)
+keymap.set("t", "<Esc>", [[<C-\><C-n>]], opts)
 
 -- Move between open window splits
 keymap.set("n", "sh", "<C-w>h", opts)
@@ -23,6 +24,13 @@ keymap.set("i", "jj", "<ESC>", opts)
 
 -- Use Neotree as default
 keymap.set("n", "<leader>e", ":Neotree toggle<CR>", opts)
+
+keymap.set(
+  "n",
+  "<leader>z",
+  "<cmd>lua require'centerpad'.toggle{ leftpad = 20, rightpad = 20 }<cr>",
+  { silent = true, noremap = true }
+)
 
 keymap.set("n", "C-d", "C-dzz", opts)
 keymap.set("n", "C-u", "C-uzz", opts)
