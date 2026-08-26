@@ -1,6 +1,14 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+local function paste_plus_into_terminal()
+  local text = vim.fn.getreg("+")
+  local chan = vim.b.terminal_job_id
+  if text ~= "" and chan and chan > 0 then
+    vim.api.nvim_chan_send(chan, text)
+  end
+end
+
 -- Window splits
 keymap.set("n", "<leader>sh", ":split<CR>", opts)
 keymap.set("n", "<leader>sv", ":vsplit<CR>", opts)
@@ -9,6 +17,8 @@ keymap.set("n", "<leader>sv", ":vsplit<CR>", opts)
 keymap.set("n", "<leader>tv", ":vsplit | terminal<CR>", opts)
 keymap.set("n", "<leader>th", ":split | terminal<CR>", opts)
 keymap.set("t", "<Esc>", [[<C-\><C-n>]], opts)
+keymap.set("t", "<C-S-v>", paste_plus_into_terminal, opts)
+keymap.set("v", "<C-c>", '"+y', opts)
 
 -- Move between open window splits
 keymap.set("n", "sh", "<C-w>h", opts)
