@@ -1,6 +1,7 @@
 vim.opt.conceallevel = 0
 vim.opt.wrap = true
 vim.g.lazyvim_ts_lsp = "vtsls"
+vim.g.lazyvim_picker = "telescope"
 vim.opt.clipboard = "unnamedplus"
 
 if vim.fn.has("wsl") == 1 and vim.loop.fs_stat("/proc/sys/fs/binfmt_misc/WSLInterop") == nil then
