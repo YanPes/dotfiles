@@ -2,6 +2,8 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
+      -- LazyVim installs this list and enables highlighting, indentation and folds.
+      -- Its opts_extend also preserves parsers supplied by language extras.
       ensure_installed = {
         "bash",
         "css",
@@ -24,11 +26,6 @@ return {
         "vim",
         "vimdoc",
         "yaml",
-      },
-      auto_install = true,
-      highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false,
       },
     },
   },
