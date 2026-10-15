@@ -73,15 +73,13 @@ return {
     lazy = true,
     priority = 1000,
     opts = {
+      theme = "zen",
       transparent = false,
-      styles = {
-        comments = { italic = true },
-        keywords = { italic = true },
-        functions = { italic = true },
-        variables = { italic = true },
-        sidebars = "transparent",
-        floats = "transparent",
-      },
+      commentStyle = { italic = true },
+      keywordStyle = { italic = false },
+      functionStyle = { italic = false },
+      statementStyle = { italic = false },
+      typeStyle = { italic = false },
     },
   },
   {
@@ -173,7 +171,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "default",
+      colorscheme = "kanso-zen",
     },
   },
 }
